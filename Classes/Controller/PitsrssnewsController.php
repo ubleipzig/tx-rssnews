@@ -49,6 +49,7 @@ class Tx_PitsRssnews_Controller_PitsrssnewsController extends \TYPO3\CMS\Extbase
 		// Fetch contents from the external url
 		$feedUrl = ( $array['url'] ) ? $array['url'] : $this->settings['feedURL'];
 		if ( !empty( $feedUrl ) ) {
+			
 			try {
 				$rss_feed = (file_get_contents($feedUrl))?file_get_contents($feedUrl):FALSE;
 			if( $rss_feed !== FALSE ){
@@ -77,25 +78,27 @@ class Tx_PitsRssnews_Controller_PitsrssnewsController extends \TYPO3\CMS\Extbase
 				$this->view->assign( 'rssData', $rssData );
 			}else{
 				$invalidurl = 1;
-				$locallangURL = Tx_Extbase_Utility_Localization::translate( 'url_contents_notavail', 
-																	$this->request->getControllerExtensionName(), $arguments = NULL );
-				$this->flashMessageContainer->add( $locallangURL );
+				$locallangURL = \TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('url_contents_notavail',$this->request->getControllerExtensionName(), $arguments = NULL );
+				//$this->flashMessageContainer->add( $locallangURL );
+				$this->addFlashMessage($locallangURL);
 				$this->view->assign( 'validurl', $invalidurl );
 			}
 		}
 		catch (Exception $e) {
     			$invalidurl = 1;
-				$locallangURL = Tx_Extbase_Utility_Localization::translate( 'url_contents_notavail', 
-																	$this->request->getControllerExtensionName(), $arguments = NULL );
-				$this->flashMessageContainer->add( $locallangURL );
+    			
+				$locallangURL = \TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('url_contents_notavail',$this->request->getControllerExtensionName(), $arguments = NULL );
+				
+				//$this->flashMessageContainer->add($locallangURL);
+				$this->addFlashMessage($locallangURL);
 				$this->view->assign( 'validurl', $invalidurl );
         }
 		}
 		 else {
 			$invalidurl = 1;
-			$locallangURL = Tx_Extbase_Utility_Localization::translate( 'invalid_url', 
-																$this->request->getControllerExtensionName(), $arguments = NULL );
-			$this->flashMessageContainer->add( $locallangURL );
+			$locallangURL = \TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('invalid_url',$this->request->getControllerExtensionName(), $arguments = NULL );
+			//$this->flashMessageContainer->add( $locallangURL );
+			$this->addFlashMessage($locallangURL);
 			$this->view->assign( 'validurl', $invalidurl );
 		}
 	   
