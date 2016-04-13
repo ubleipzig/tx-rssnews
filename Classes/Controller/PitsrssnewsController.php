@@ -49,7 +49,8 @@ class Tx_PitsRssnews_Controller_PitsrssnewsController extends \TYPO3\CMS\Extbase
 		// Fetch contents from the external url
 		$feedUrl = ( $array['url'] ) ? $array['url'] : $this->settings['feedURL'];
 		if ( !empty( $feedUrl ) ) {
-			$rss_feed = file_get_contents( $feedUrl );
+			try {
+				$rss_feed = (file_get_contents($feedUrl))?file_get_contents($feedUrl):FALSE;
 			if( $rss_feed !== FALSE ){
 				$enc = mb_detect_encoding( $rss_feed );
 				$data = mb_convert_encoding( $rss_feed, 'UTF-8', $enc );
@@ -81,13 +82,24 @@ class Tx_PitsRssnews_Controller_PitsrssnewsController extends \TYPO3\CMS\Extbase
 				$this->flashMessageContainer->add( $locallangURL );
 				$this->view->assign( 'validurl', $invalidurl );
 			}
-		} else {
+		}
+		catch (Exception $e) {
+    			$invalidurl = 1;
+				$locallangURL = Tx_Extbase_Utility_Localization::translate( 'url_contents_notavail', 
+																	$this->request->getControllerExtensionName(), $arguments = NULL );
+				$this->flashMessageContainer->add( $locallangURL );
+				$this->view->assign( 'validurl', $invalidurl );
+        }
+		}
+		 else {
 			$invalidurl = 1;
 			$locallangURL = Tx_Extbase_Utility_Localization::translate( 'invalid_url', 
 																$this->request->getControllerExtensionName(), $arguments = NULL );
 			$this->flashMessageContainer->add( $locallangURL );
 			$this->view->assign( 'validurl', $invalidurl );
 		}
+	   
+	
 	}
 	
    /**
