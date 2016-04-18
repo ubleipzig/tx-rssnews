@@ -60,3 +60,4 @@ RSS News Feed
 	UsersManual/Index
 	AdministratorManual/Index
 	KnownProblems/Index
+	ChangeLog/Index

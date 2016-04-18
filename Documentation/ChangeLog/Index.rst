@@ -6,7 +6,12 @@
 .. include:: ../Includes.txt
 
 
-.. _change-log:
+.. _changelog:
 
-Change Log
-============
+ChangeLog
+=========
+
+* The extension is made compatible with the current versions of TYPO3 7.6.x
+
+* It shows an error message text when invalid or blank URL is given.
+

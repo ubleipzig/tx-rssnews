@@ -79,7 +79,6 @@ class Tx_PitsRssnews_Controller_PitsrssnewsController extends \TYPO3\CMS\Extbase
 			}else{
 				$invalidurl = 1;
 				$locallangURL = \TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('url_contents_notavail',$this->request->getControllerExtensionName(), $arguments = NULL );
-				//$this->flashMessageContainer->add( $locallangURL );
 				$this->addFlashMessage($locallangURL);
 				$this->view->assign( 'validurl', $invalidurl );
 			}
@@ -89,7 +88,6 @@ class Tx_PitsRssnews_Controller_PitsrssnewsController extends \TYPO3\CMS\Extbase
     			
 				$locallangURL = \TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('url_contents_notavail',$this->request->getControllerExtensionName(), $arguments = NULL );
 				
-				//$this->flashMessageContainer->add($locallangURL);
 				$this->addFlashMessage($locallangURL);
 				$this->view->assign( 'validurl', $invalidurl );
         }
@@ -97,7 +95,6 @@ class Tx_PitsRssnews_Controller_PitsrssnewsController extends \TYPO3\CMS\Extbase
 		 else {
 			$invalidurl = 1;
 			$locallangURL = \TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('invalid_url',$this->request->getControllerExtensionName(), $arguments = NULL );
-			//$this->flashMessageContainer->add( $locallangURL );
 			$this->addFlashMessage($locallangURL);
 			$this->view->assign( 'validurl', $invalidurl );
 		}
