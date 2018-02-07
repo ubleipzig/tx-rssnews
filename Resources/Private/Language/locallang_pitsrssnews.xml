@@ -13,8 +13,8 @@
 		    <label index="ff.sheetTitle2">Settings</label>
 			<label index="ff.feed_url">Enter the URL</label>
 			<label index="ff.news_count">Count of Displaying News</label>
-			<label index="ff.desc_title">Crop News Title (No.of words)</label>
-			<label index="ff.desc_crop">Crop News Description (No.of words)</label>
+			<label index="ff.desc_title">Crop News Title (No.of characters)</label>
+			<label index="ff.desc_crop">Crop News Description (No.of characters)</label>
 			<label index="ff.feed_header">Display Feed Header</label>
 			<label index="ff.content_div">Content Divider</label>
 			<label index="ff.autoplay">Autoplay</label>

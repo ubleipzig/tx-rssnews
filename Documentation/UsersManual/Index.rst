@@ -33,6 +33,4 @@ If you want to add header, please add and goto the tab “Plugin”. Select the 
 	:titlesonly:
 	:glob:
 
-	Introduction/Index
-	UsersManual/Index
 	RssOption/Index

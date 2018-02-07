@@ -6,8 +6,6 @@
 	</meta>
 	<data type="array">
 		<languageKey index="default" type="array">
-			<label index="tx_pitsrssnews_domain_model_pitsrssnews">Pitsrssnews</label>
-			<label index="tx_pitsrssnews_domain_model_pitsrssnews.news">news</label>
 			<label index="invalid_url">Please enter a valid URL!!</label>
 			<label index="url_contents_notavail">Sorry! Entered url is currently not available / exists.</label>
 		</languageKey>

@@ -1,5 +1,5 @@
 <?php
-
+namespace Pits\PitsRssnews\Controller;
 /***************************************************************
  *  Copyright notice
  *
@@ -33,7 +33,21 @@
  *
  */
 
-class Tx_PitsRssnews_Controller_PitsrssnewsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
+class PitsrssnewsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
+
+	/**
+      * Initializes the view before invoking an action method.
+	* Add content object data to view
+	*
+	* @param \TYPO3\CMS\Extbase\Mvc\View\ViewInterface $view The view to be initialized
+	* @return void
+	*/
+	protected function initializeView(\TYPO3\CMS\Extbase\Mvc\View\ViewInterface $view)
+	{   
+		$view->assign('contentObjectData', $this->configurationManager->getContentObject()->data);
+	    parent::initializeView($view);
+	}
+
 
 	/**
 	 * action list
@@ -57,7 +71,7 @@ class Tx_PitsRssnews_Controller_PitsrssnewsController extends \TYPO3\CMS\Extbase
 				$data = mb_convert_encoding( $rss_feed, 'UTF-8', $enc );
 				
 				// Generate simple xml array from the fetched page content
-				$xml = new SimpleXmlElement( $data, LIBXML_NOCDATA );
+				$xml = new \SimpleXmlElement( $data, LIBXML_NOCDATA );
 				$xml_new = $this->simplexml2array( $xml );
 
 				// Fetching input datas
@@ -79,6 +93,7 @@ class Tx_PitsRssnews_Controller_PitsrssnewsController extends \TYPO3\CMS\Extbase
 			}else{
 				$invalidurl = 1;
 				$locallangURL = \TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('url_contents_notavail',$this->request->getControllerExtensionName(), $arguments = NULL );
+				
 				$this->addFlashMessage($locallangURL);
 				$this->view->assign( 'validurl', $invalidurl );
 			}
@@ -106,7 +121,7 @@ class Tx_PitsRssnews_Controller_PitsrssnewsController extends \TYPO3\CMS\Extbase
 	* Function for parsing XML array
     */		
 	public function simplexml2array($xml) {
-		if ( $xml instanceof SimpleXMLElement ) {
+		if ( $xml instanceof \SimpleXMLElement ) {
 			$attributes = $xml->attributes();
 			foreach($attributes as $k=>$v) {
 				if ($v){
