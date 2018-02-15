@@ -1,0 +1,5 @@
+# cat=settings/enable; type=string; label=LLL:EXT:pits_rssnews/Resources/Private/Language/locallang.xml:settings.proxy_host
+proxy_host =
+
+# cat=settings/enable; type=integer; label=LLL:EXT:pits_rssnews/Resources/Private/Language/locallang.xml:settings.connection_timeout
+connection_timeout = 3

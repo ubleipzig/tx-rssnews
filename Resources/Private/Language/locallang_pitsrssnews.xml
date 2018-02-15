@@ -6,11 +6,11 @@
 	</meta>
 	<data type="array">
 		<languageKey index="default" type="array">
-		<label index="mlang_tabs_tab">RSS News Feed</label>
+			<label index="mlang_tabs_tab">RSS News Feed</label>
 			<label index="mlang_labels_tabdescr"></label>
 			<label index="mlang_labels_tablabel"></label>
 			<label index="ff.sheetTitle1">Enter URL</label>
-		    <label index="ff.sheetTitle2">Settings</label>
+			<label index="ff.sheetTitle2">Settings</label>
 			<label index="ff.feed_url">Enter the URL</label>
 			<label index="ff.news_count">Count of Displaying News</label>
 			<label index="ff.desc_title">Crop News Title (No.of characters)</label>
