@@ -7,9 +7,12 @@
 	<data type="array">
 		<languageKey index="default" type="array">
 			<label index="invalid_url">Please enter a valid URL!!</label>
-			<label index="url_contents_notavail">Sorry! Entered url is currently not available / exists.</label>
+			<label index="url_contents_notavail">Sorry! Service is not available for the moment.</label>
 			<label index="settings.proxy_host">Proxy-URL: If you need to connect via HTTP-Proxy enter here, e.g. tcp://proxy.example.com:3128</label>
 			<label index="settings.connection_timeout">Connection-Timeout: The seconds to wait for response, e.g. 3</label>
+		</languageKey>
+		<languageKey index="de" type="array">
+			<label index="url_contents_notavail">Der Service steht leider im Moment nicht zur Verfügung.</label>
 		</languageKey>
 	</data>
 </T3locallang>
