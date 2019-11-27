@@ -1,0 +1,16 @@
+## CHANGELOG
+
+### 1.0.2
+
+* adds CHANGELOG
+* adds composer.json
+
+### 1.0.1
+
+* adjusts displaying error responses of rss feeds
+* does not displaing the external blog rss feed container if service is not available
+
+### 1.0.0
+
+* forking original project 'pits_rssnews' at release tag 8.0.0
+* adds proxy and timeout settings to extension configuration 
