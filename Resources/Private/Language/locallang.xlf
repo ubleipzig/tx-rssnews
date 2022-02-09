@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2016-12-05T18:20:51Z" product-name="rssnews">
+		<header/>
+		<body>
+			<trans-unit id="invalid_url" xml:space="preserve">
+				<source>Please enter a valid URL!</source>
+			</trans-unit>
+			<trans-unit id="url_contents_notavail" xml:space="preserve">
+				<source>Sorry! Service is not available at the moment.</source>
+			</trans-unit>
+			<trans-unit id="settings.proxy_host" xml:space="preserve">
+				<source>Proxy-URL: If you need to connect via HTTP-Proxy enter here, e.g. tcp://proxy.example.com:3128</source>
+			</trans-unit>
+			<trans-unit id="settings.connection_timeout" xml:space="preserve">
+				<source>Connection-Timeout: The seconds to wait for response, e.g. 3</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-10-27T14:00:28Z" product-name="rssnews">
+		<header/>
+		<body>
+			<trans-unit id="tx_rssnews_domain_model_rssnews">
+				<source>Rssnews</source>
+			</trans-unit>
+			<trans-unit id="tx_rssnews_domain_model_rssnews.news">
+				<source>News</source>
+			</trans-unit>
+		</body>
+	</file>
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2020-11-30T15:12:22Z" product-name="rssnews">
+		<header/>
+		<body>
+			<trans-unit id="tx_rssnews_domain_model_rssnews">
+				<source>Rssnews</source>
+				<target>Rssnews</target>
+			</trans-unit>
+			<trans-unit id="tx_rssnews_domain_model_rssnews.news">
+				<source>News</source>
+				<target>News</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

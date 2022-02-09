@@ -1,0 +1,40 @@
+plugin.tx_rssnews {
+	view {
+		# cat=plugin.tx_rssnews/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:rssnews/Resources/Private/Templates/
+		# cat=plugin.tx_rssnews/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:rssnews/Resources/Private/Partials/
+		# cat=plugin.tx_rssnews/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:rssnews/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_rssnews//a; type=string; label=Default storage PID
+		storagePid = 
+	}
+	settings {
+    	feedURL = 
+    	newsCount =
+    	cropTitle =
+    	cropDesc = 
+    	rssfeedHead =
+    	newsDivider = 
+    	autoplay = 
+    	includeJSlib = 1
+    	defaultCSS = 1
+	}
+}
+
+module.tx_rssnews {
+	view {
+		# cat=module.tx_rssnews/file; type=string; label=Path to template root (BE)
+		templateRootPath = EXT:rssnews/Resources/Private/Backend/Templates/
+		# cat=module.tx_rssnews/file; type=string; label=Path to template partials (BE)
+		partialRootPath = EXT:rssnews/Resources/Private/Backend/Partials/
+		# cat=module.tx_rssnews/file; type=string; label=Path to template layouts (BE)
+		layoutRootPath = EXT:rssnews/Resources/Private/Backend/Layouts/
+	}
+	persistence {
+		# cat=module.tx_rssnews//a; type=string; label=Default storage PID
+		storagePid = 
+	}
+}

@@ -1,0 +1,57 @@
+plugin.tx_rssnews {
+	view {
+		templateRootPath = {$plugin.tx_rssnews.view.templateRootPath}
+		partialRootPath = {$plugin.tx_rssnews.view.partialRootPath}
+		layoutRootPath = {$plugin.tx_rssnews.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_rssnews.persistence.storagePid}
+	}
+	features {
+		# uncomment the following line to enable the new Property Mapper.
+		# rewrittenPropertyMapper = 1
+	}
+	settings {
+    	feedURL = {$plugin.tx_rssnews.settings.feedURL}
+    	newsCount = {$plugin.tx_rssnews.settings.newsCount}
+    	cropTitle = {$plugin.tx_rssnews.settings.cropTitle}
+    	cropDesc = {$plugin.tx_rssnews.settings.cropDesc}
+    	rssfeedHead = {$plugin.tx_rssnews.settings.rssfeedHead}
+    	newsDivider = {$plugin.tx_rssnews.settings.newsDivider}
+    	autoplay = {$plugin.tx_rssnews.settings.autoplay}
+    	includeJSlib = {$plugin.tx_rssnews.settings.includeJSlib}
+    	defaultCSS = {$plugin.tx_rssnews.settings.defaultCSS}
+	}
+}
+
+plugin.tx_rssnews._CSS_DEFAULT_STYLE (
+	input.f3-form-error {
+		background-color:#FF9F9F;
+		border: 1px #FF0000 solid;
+	}
+
+	.tx-rssnews table {
+		border-collapse:separate;
+		border-spacing:10px;
+	}
+
+	.tx-rssnews table th {
+		font-weight:bold;
+	}
+
+	.tx-rssnews table td {
+		vertical-align:top;
+	}
+)
+
+ # Module configuration
+module.tx_rssnews {
+	persistence {
+		storagePid = {$module.tx_rssnews.persistence.storagePid}
+	}
+	view {
+		templateRootPath = {$module.tx_rssnews.view.templateRootPath}
+		partialRootPath = {$module.tx_rssnews.view.partialRootPath}
+		layoutRootPath = {$module.tx_rssnews.view.layoutRootPath}
+	}
+}

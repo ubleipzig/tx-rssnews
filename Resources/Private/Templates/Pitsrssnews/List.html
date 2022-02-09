@@ -1,0 +1,68 @@
+<!-- refs #14848 - validurl is assigned with 1 if it is false, so send positive validation in else clause! - FM -->
+<f:if condition="{validurl}">
+	<f:else>
+		<f:layout name="Default" />
+		<f:section name="main">
+		<f:if condition="{rssData.defaultCSS}">
+			<link rel="stylesheet" href="typo3conf/ext/rssnews/Resources/Public/css/style.css" />
+		</f:if>
+		<f:if condition="{rssData.feedhead}">
+			<div class=rss_head>
+				<h3>{rssData.rss_head}</h3>
+			</div>
+		</f:if>
+		<!-- refs #14848 uncommented - display nothing is service unavailable! - FM
+		<f:if condition="{validurl}">
+			<f:flashMessages />
+		</f:if>-->
+			<div id="rss-external" class="tx_rssnews" >
+				<f:if condition="{rssData.includeJSlib}">
+					<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
+				</f:if>
+				<ul>
+					<f:for each="{rssData.xml_array}" as="rss_news" key="number">
+						<f:if condition="{number} <= {rssData.cnt}">
+							<li>
+								<div class="rss_newsitems">
+									<div class="rss_date"><f:format.date format="d M Y">{rss_news.pubDate}</f:format.date></div>
+									<f:if condition="{rssData.croptitle}">
+										<f:then>
+											<div class="rss_title"><b><f:link.external uri="{rss_news.link}" target="_blank"><f:format.crop maxCharacters="{rssData.croptitle}">{rss_news.title}</f:format.crop></f:link.external></b></div>
+										</f:then>
+										<f:else>
+											<div class="rss_title"><b><f:link.external uri="{rss_news.link}" target="_blank">{rss_news.title}</f:link.external></b></div>
+										</f:else>
+									</f:if>
+									<f:if condition="{rssData.desc}">
+										<f:then>
+											<div class="rss_desc"><f:format.html><f:link.external uri="{rss_news.link}" target="_blank"><f:format.crop maxCharacters="{rssData.desc}">{rss_news.description}</f:format.crop></f:link.external></f:format.html></div>
+										</f:then>
+										<f:else>
+											<div class="rss_desc"><f:format.html><f:link.external uri="{rss_news.link}" target="_blank">{rss_news.description}</f:link.external></f:format.html></div>
+										</f:else>
+									</f:if>
+								</div>
+									<f:if condition="{rssData.hbar}">
+									<div class="rss_hbar"><hr></div>
+									</f:if>
+							</li>
+						</f:if>
+					</f:for>
+				</ul>
+				<f:if condition="{rssData.autoplay}">
+					<script src="typo3conf/ext/rssnews/Resources/Public/js/jcarousellite_1.0.1c4.js " type="text/javascript"></script>
+					<script type="text/javascript">
+						$(document).ready(function() {
+							$(".tx_rssnews").jCarouselLite({
+									vertical: true,
+									hoverPause:true,
+									auto:5,
+									speed:2000
+							});
+						});
+					</script>
+				</f:if>
+			</div>
+		</f:section>
+	</f:else>
+</f:if>
