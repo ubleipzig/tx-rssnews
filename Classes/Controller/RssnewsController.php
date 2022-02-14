@@ -26,9 +26,10 @@
 
 namespace Ubl\Rssnews\Controller;
 
-use \TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
-use \TYPO3\CMS\Extbase\Utility\LocalizationUtility as Localization;
-use \TYPO3\CMS\Extensionmanager\Utility\ConfigurationUtility;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
+use TYPO3\CMS\Extbase\Utility\LocalizationUtility as Localization;
+
 
 /**
  * RssnewsController
@@ -45,14 +46,21 @@ class RssnewsController extends ActionController
     private $context;
 
     /**
-     * constructor
+     * Initializes the controller before invoking an action method.
      *
-     * @params \TYPO3\CMS\Extensionmanager\Utility\ConfigurationUtility $extensionUtility
+     * Override this method to solve tasks which all actions have in
+     * common.
+     *
      */
-    public function __construct(ConfigurationUtility $extensionUtility)
+    public function initializeAction()
     {
-        $config = $extensionUtility->getCurrentConfiguration('rssnews');
-
+        /**
+         * @var \TYPO3\CMS\Extbase\Object\ObjectManager $objectManager
+         * @var \TYPO3\CMS\Extensionmanager\Utility\ConfigurationUtility $configurationUtility
+         */
+        $objectManager = GeneralUtility::makeInstance('TYPO3\\CMS\\Extbase\\Object\\ObjectManager');
+        $configurationUtility = $objectManager->get('TYPO3\CMS\Extensionmanager\Utility\ConfigurationUtility');
+        $config = $configurationUtility->getCurrentConfiguration('rssnews');
         $this->setContext($config);
     }
 
@@ -68,6 +76,14 @@ class RssnewsController extends ActionController
         parent::initializeView($view);
     }
 
+    /**
+     * Set context for connection via proxy
+     *
+     * @param null $config
+     *
+     * @return void
+     * @access private
+     */
     private function setContext($config = null)
     {
         $options = [];
@@ -83,6 +99,12 @@ class RssnewsController extends ActionController
         $this->context = \stream_context_create($options);
     }
 
+    /**
+     * Get context of proxy connection
+     *
+     * @return \stream_context_create $context
+     * @access private
+     */
     private function getContext()
     {
         if (!$this->context) $this->setContext();
@@ -92,6 +114,9 @@ class RssnewsController extends ActionController
 
     /**
      * List action.
+     *
+     * @return void
+     * @access public
      */
     public function listAction()
     {
@@ -154,6 +179,11 @@ class RssnewsController extends ActionController
 
     /**
      * Function for parsing XML array.
+     *
+     * @param string $xml
+     *
+     * @return mixed
+     * @access public
      */
     public function simplexml2array($xml)
     {

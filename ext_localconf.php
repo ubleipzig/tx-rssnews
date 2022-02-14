@@ -5,7 +5,7 @@ call_user_func(
     function() {
 
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-            'Ubl.' . $_EXTKEY,
+            'Ubl.Rssnews',
             'Rssnews',
             [
                 'Rssnews' => 'list',

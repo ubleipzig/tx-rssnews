@@ -4,7 +4,7 @@ if (!defined('TYPO3_MODE')) {
 }
 
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
-	'Ubl.' . $_EXTKEY,
+	'Ubl.Rssnews',
 	'Rssnews',
 	'RSS News Feed'
 );

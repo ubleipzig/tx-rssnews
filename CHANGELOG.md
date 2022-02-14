@@ -3,6 +3,7 @@
 ## [2.0.0](https://github.com/ubleipzig/tx-rssnews/tree/2.0.0)
 
 * renames extension to **Rssnews** and changes namespace to **Ubl** to continue fork as autonomous extension
+* moves loading configuration of ConfigurationUtility to _initializeAction()_ of RssnewsController 
 * adds support for typo3 v9
 
 ## [1.1.2](https://github.com/ubleipzig/tx-rssnews-deprecated/tree/1.1.2)

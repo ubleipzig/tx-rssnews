@@ -38,6 +38,11 @@
             "Ubl\\Rssnews\\": "Classes/"
         }
     },
+    "autoload-dev": {
+      "psr-4": {
+        "Ubl\\Rssnews\\Tests\\": "Tests"
+      }
+    },
     "extra": {
         "typo3/cms": {
             "extension-key": "tx-rssnews"
