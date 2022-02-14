@@ -17,7 +17,7 @@ gitolite_mirror:
     cd /tmp
     git clone --mirror ${CI_REPOSITORY_URL} project
     cd project
-    git remote add gitolite git@git.ub.intern.uni-leipzig.de:t3extensions.git
+    git remote add gitolite git@git.ub.intern.uni-leipzig.de:tx-rssnews.git
     git push --mirror gitolite
   tags:
     - docker
