@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## [2.1.0](https://github.com/ubleipzig/tx-rssnews/tree/2.1.0)
+[Changelog](https://github.com/ubleipzig/tx-rssnews/compare/2.0.0...2.1.0)
+
+* removes support of typo3 v7
+* fixes initializing extension configuration by new class _\TYPO3\CMS\Core\Configuration\ExtensionConfiguration_
+* migrate TypoScript definitions to _/Configuration/TCA/Overrides_
+
 ## [2.0.0](https://github.com/ubleipzig/tx-rssnews/tree/2.0.0)
 
 * renames extension to **Rssnews** and changes namespace to **Ubl** to continue fork as autonomous extension
@@ -8,21 +15,15 @@
 
 ## [1.1.2](https://github.com/ubleipzig/tx-rssnews-deprecated/tree/1.1.2)
 
-[Changelog](https://github.com/ubleipzig/tx-rssnews-deprecated/compare/1.1.1...1.1.2)
-
 * removes sorting parameters due to false column at Configuration/TCA/tx_pitsrssnews_domain_model_pitsrssnews.php
 
 ## [1.1.1](https://github.com/ubleipzig/tx-rssnews-deprecated/tree/1.1.1)
-
-[Changelog](https://github.com/ubleipzig/tx-rssnews-deprecated/compare/1.1.0...1.1.1)
 
 * adjusts all deprecated warnings at TCA settings
 * adds ext_tables.sql
     * lack of file leads on uncompleted install of table at typo3 v8
 
 ## [1.1.0](https://github.com/ubleipzig/tx-rssnews-deprecated/tree/1.1.0)
-
-[Changelog](https://github.com/ubleipzig/tx-rssnews-deprecated/compare/1.0.2...1.1.0)
 
 * removes support for Typo3 v6
 * removes support for PHP v5
@@ -31,7 +32,6 @@
 * adds translations in German
 
 ## [1.0.2](https://github.com/ubleipzig/tx-rssnews-deprecated/tree/1.0.2)
-
 
 * adds CHANGELOG
 * adds composer.json

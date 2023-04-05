@@ -1,5 +1,5 @@
 <?php
-if (!defined('TYPO3_MODE')) {
+/**if (!defined('TYPO3_MODE')) {
 	die ('Access denied.');
 }
 
@@ -15,5 +15,5 @@ $pluginSignature = str_replace( '_', '', $_EXTKEY ).'_rssnews';
 $GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist'][$pluginSignature] = 'pi_flexform';
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
 	$pluginSignature, 'FILE:EXT:' . $_EXTKEY . '/Configuration/FlexForms/flexform.xml'
-);
+);*/
 
