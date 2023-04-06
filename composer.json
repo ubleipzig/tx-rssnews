@@ -5,7 +5,7 @@
     "homepage": "https://ub.uni-leipzig.de",
     "keywords":
             ["typo3", "rss", "extension", "feed"],
-    "licence": ["MIT"],
+    "license": ["GPL-2.0-or-later"],
     "version": "2.1.0",
     "support": {
 		"issues": "https://github.com/ubleipzig/tx-rssnews/issues"
@@ -49,7 +49,7 @@
         }
     },
     "replace": {
-      "rssnews": "self.version",
-      "typo3-ter/rssnews": "self.version"
+      "ubl/tx-rssnews": "self.version",
+      "typo3-ter/tx-rssnews": "self.version"
     }
 }
