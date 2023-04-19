@@ -3,8 +3,8 @@
 RssNews is a Typo3 extension importing items of external RSS feeds for displaying at t3 frontend. Forked extension of Pits_Rssnews which will not be longer maintained. Rssnews has been continued with an own UBL namespace since version 2.0.0.
 
 ## Requirements
-* Typo3 > 7.0 < 9.5.99
-* PHP >= 7.2
+* Typo3 > 8.0 < 9.5.99
+* PHP >= 7.4
 
 There haven't been tests with higher versions of typo3 but the codebase should be sufficient.
 
