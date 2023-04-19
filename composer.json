@@ -5,13 +5,13 @@
     "homepage": "https://ub.uni-leipzig.de",
     "keywords":
             ["typo3", "rss", "extension", "feed"],
-    "licence": ["MIT"],
-    "version": "2.1.0",
+    "license": "MIT",
+    "version": "2.1.1",
     "support": {
 		"issues": "https://github.com/ubleipzig/tx-rssnews/issues"
 	},
 	"require": {
-		"typo3/cms": "^7.6 || ^8.0 || ^9.0"
+		"typo3/cms": "^8.0 || ^9.0"
 	},
     "authors":[
         {
@@ -39,9 +39,9 @@
         }
     },
     "autoload-dev": {
-      "psr-4": {
-        "Ubl\\Rssnews\\Tests\\": "Tests"
-      }
+        "psr-4": {
+          "Ubl\\Rssnews\\Tests\\": "Tests"
+        }
     },
     "extra": {
         "typo3/cms": {
@@ -49,7 +49,6 @@
         }
     },
     "replace": {
-      "rssnews": "self.version",
       "typo3-ter/rssnews": "self.version"
     }
 }

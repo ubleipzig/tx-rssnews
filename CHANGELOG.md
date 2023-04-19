@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## [2.1.1](https://github.com/ubleipzig/tx-rssnews/tree/2.1.1)
+[Changelog](https://github.com/ubleipzig/tx-rssnews/compare/2.1.0...2.1.1)
+
+* fixin' dependencies at _composer.json_ and _ext_localconf.php_
+
 ## [2.1.0](https://github.com/ubleipzig/tx-rssnews/tree/2.1.0)
 [Changelog](https://github.com/ubleipzig/tx-rssnews/compare/2.0.0...2.1.0)
 
