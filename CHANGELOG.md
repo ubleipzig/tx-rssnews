@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## [2.1.2](https://github.com/ubleipzig/tx-rssnews/tree/2.1.2)
+[Changelog](https://github.com/ubleipzig/tx-rssnews/compare/2.1.1...2.1.2)
+
+* fixin' deprecated @validate annotation cmp. [83167](https://docs.typo3.org/c/typo3/cms-core/main/en-us/Changelog/9.3/Deprecation-83167-ReplaceValidateWithTYPO3CMSExtbaseAnnotationValidate.html)
+
 ## [2.1.1](https://github.com/ubleipzig/tx-rssnews/tree/2.1.1)
 [Changelog](https://github.com/ubleipzig/tx-rssnews/compare/2.1.0...2.1.1)
 

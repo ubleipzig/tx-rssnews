@@ -25,6 +25,8 @@
 
 namespace Ubl\Rssnews\Domain\Model;
 
+use TYPO3\CMS\Extbase\Annotation as Extbase;
+
 /**
  * Class Rssnews Model
  *
@@ -38,8 +40,8 @@ class Rssnews extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * news
 	 *
-	 * @var string
-	 * @validate NotEmpty
+     * @var string $news
+	 * @Extbase\Validate("NotEmpty")
 	 */
 	protected $news = '';
 

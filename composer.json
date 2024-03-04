@@ -6,7 +6,7 @@
     "keywords":
             ["typo3", "rss", "extension", "feed"],
     "license": "MIT",
-    "version": "2.1.1",
+    "version": "2.1.2",
     "support": {
 		"issues": "https://github.com/ubleipzig/tx-rssnews/issues"
 	},
