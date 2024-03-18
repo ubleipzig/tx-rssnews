@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## [2.1.3](https://github.com/ubleipzig/tx-rssnews/tree/2.1.3)
+[Changelog](https://github.com/ubleipzig/tx-rssnews/compare/2.1.2...2.1.3)
+
+* fixes minor TCA outdated parameters
+
 ## [2.1.2](https://github.com/ubleipzig/tx-rssnews/tree/2.1.2)
 [Changelog](https://github.com/ubleipzig/tx-rssnews/compare/2.1.1...2.1.2)
 

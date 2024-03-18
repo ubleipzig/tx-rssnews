@@ -37,7 +37,7 @@ return [
                 'sys_language_uid,
                 l10n_parent,
                 l10n_diffsource,
-                hidden;;1,
+                hidden,--palette--;;1,
                 news,
                 --div--;LLL:EXT:cms/locallang_ttc.xml:tabs.access,
                 starttime,
