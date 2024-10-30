@@ -14,7 +14,7 @@ $EM_CONF[$_EXTKEY] = [
 	'title' => 'RSS News Feed',
 	'description' => 'This extension imports rss news items from external rss feeds. This extension builds using extbase and fluid. It does not import anything into the database and it only displays the rss news articles in front end.',
 	'category' => 'plugin',
-	'version' => '2.1.3',
+	'version' => '2.1.4',
 	'state' => 'stable',
 	'uploadfolder' => false,
 	'createDirs' => '',
@@ -26,7 +26,7 @@ $EM_CONF[$_EXTKEY] = [
 	[
 		'depends' => 
 		[
-			'typo3' => '8.0.0 - 9.5.99',
+			'typo3' => '9.0.0 - 9.5.99',
 		],
 		'conflicts' => 
 		[
