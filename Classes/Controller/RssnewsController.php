@@ -74,13 +74,17 @@ class RssnewsController extends ActionController
      * Initializes the view before invoking an action method.
      * Add content object data to view.
      *
+     * Uncommented due to assigning of content data object seems not have any use in the further process of the
+     * extension. Marked as deprecated for removing method at a release in the future.
+     *
      * @param \TYPO3\CMS\Extbase\Mvc\View\ViewInterface $view The view to be initialized
+     * @deprecated
      */
-    protected function initializeView(\TYPO3\CMS\Extbase\Mvc\View\ViewInterface $view)
+    /* protected function initializeView(\TYPO3\CMS\Extbase\Mvc\View\ViewInterface $view)
     {
         $view->assign('contentObjectData', $this->configurationManager->getContentObject()->data);
         parent::initializeView($view);
-    }
+    } */
 
     /**
      * Set context for connection via proxy
@@ -131,7 +135,7 @@ class RssnewsController extends ActionController
         $invalidurl = 0;
 
         // Fetch contents from the external url
-        $feedUrl = ($array['url']) ? $array['url'] : $this->settings['feedURL'];
+        $feedUrl = ($array['url']) ?: $this->settings['feedURL'];
         if (!empty($feedUrl)) {
             try {
                 $rss_feed = file_get_contents($feedUrl, false, $this->getContext());
@@ -152,8 +156,6 @@ class RssnewsController extends ActionController
                     $rssData['hbar'] = ($array['contentdiv']) ? intval($array['contentdiv']) : $this->settings['newsDivider'];
                     $rssData['desc'] = ($array['crop_desc']) ? intval($array['crop_desc']) : $this->settings['cropDesc'];
                     $rssData['croptitle'] = ($array['crop_title']) ? intval($array['crop_title']) : $this->settings['cropTitle'];
-                    $rssData['autoplay'] = ($array['autoplay']) ? $array['autoplay'] : $this->settings['autoplay'];
-                    $rssData['includeJSlib'] = $this->settings['includeJSlib'];
                     $rssData['main_head'] = $xml_new['channel'];
                     $rssData['xml_array'] = $xml_new['channel']['item'];
                     $rssData['defaultCSS'] = $this->settings['defaultCSS'];

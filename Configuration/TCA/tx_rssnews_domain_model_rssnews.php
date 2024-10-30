@@ -26,10 +26,6 @@ return [
 
     ],
     'interface' => [
-		'showRecordFieldList' => 'sys_language_uid,
-								 l10n_parent,
-								 l10n_diffsource,
-								 hidden, news',
 	],
 	'types' => [
 		'1' => [
@@ -60,21 +56,6 @@ return [
 					['LLL:EXT:lang/locallang_general.xml:LGL.allLanguages', -1],
 					['LLL:EXT:lang/locallang_general.xml:LGL.default_value', 0]
 				],
-			],
-		],
-		'l10n_parent' => [
-			'displayCond' => 'FIELD:sys_language_uid:>:0',
-			'exclude' => 1,
-			'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.l18n_parent',
-			'config' => [
-				'type' => 'select',
-                'renderType' => 'selectSingle',
-				'items' => [
-					['', 0],
-				],
-				'foreign_table' => 'tx_rssnews_domain_model_rssnews',
-				'foreign_table_where' => 'AND tx_rssnews_domain_model_rssnews.pid=###CURRENT_PID### 
-				   						  AND tx_rssnews_domain_model_rssnews.sys_language_uid IN (-1,0)',
 			],
 		],
 		'l10n_diffsource' => [

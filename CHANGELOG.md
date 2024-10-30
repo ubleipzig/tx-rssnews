@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## [2.2.0](https://github.com/ubleipzig/tx-rssnews/tree/2.2.0)
+[Changelog](https://github.com/ubleipzig/tx-rssnews/compare/2.1.4...2.2.0)
+
+* extends support to typo3 version 10
+* removes autoplay support due to decision to avoid effort to maintain javascript libraries for the future 
+* marked as deprecated method _initializeView_ at _RssnewsController_  
+  * contains only calling "content data object" which seems not have any use in the further process of the extension
+* adds own _de.locallang_rssnews.xlf_ for German translations of flexform settings
+* removes _ext_tables.php_ with uncommented code
+
 ## [2.1.4](https://github.com/ubleipzig/tx-rssnews/tree/2.1.4)
 [Changelog](https://github.com/ubleipzig/tx-rssnews/compare/2.1.3...2.1.4)
 
