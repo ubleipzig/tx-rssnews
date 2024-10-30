@@ -94,12 +94,12 @@ class RssnewsController extends ActionController
     {
         $options = [];
         if ($config['proxy_host']) {
-            $options['http']['proxy'] = $config['proxy_host']['value'];
+            $options['http']['proxy'] = $config['proxy_host'];
             $options['http']['request_fulluri'] = true;
         }
 
         if ($config['connection_timeout']) {
-            $options['http']['timeout'] = $config['connection_timeout']['value'];
+            $options['http']['timeout'] = $config['connection_timeout'];
         }
 
         $this->context = \stream_context_create($options);

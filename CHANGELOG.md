@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## [2.1.4](https://github.com/ubleipzig/tx-rssnews/tree/2.1.4)
+[Changelog](https://github.com/ubleipzig/tx-rssnews/compare/2.1.3...2.1.4)
+
+* fixes config variables 
+  * subparameter _value_ isn't longer in use; value of config variable is now saved directly at config parameter name 
+* deletes support for typo3 version 8
+
 ## [2.1.3](https://github.com/ubleipzig/tx-rssnews/tree/2.1.3)
 [Changelog](https://github.com/ubleipzig/tx-rssnews/compare/2.1.2...2.1.3)
 
