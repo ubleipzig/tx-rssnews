@@ -29,8 +29,6 @@ namespace Ubl\Rssnews\Controller;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 use TYPO3\CMS\Extbase\Utility\LocalizationUtility as Localization;
-use TYPO3\CMS\Core\Utility\VersionNumberUtility;
-
 
 /**
  * RssnewsController
@@ -51,22 +49,11 @@ class RssnewsController extends ActionController
      *
      * Override this method to solve tasks which all actions have in
      * common.
-     *
      */
-    public function initializeAction()
+    public function initializeAction(): void
     {
-        /**
-         * @var \TYPO3\CMS\Extbase\Object\ObjectManager $objectManager
-         * @var \TYPO3\CMS\Extensionmanager\Utility\ConfigurationUtility $configurationUtility
-         */
-        if (version_compare(VersionNumberUtility::getCurrentTypo3Version(), '9.0', '<=')) {
-            $objectManager = GeneralUtility::makeInstance('TYPO3\\CMS\\Extbase\\Object\\ObjectManager');
-            $configurationUtility = $objectManager->get('TYPO3\CMS\Extensionmanager\Utility\ConfigurationUtility');
-            $config = $configurationUtility->getCurrentConfiguration('rssnews');
-        } else {
-            $config = GeneralUtility::makeInstance(\TYPO3\CMS\Core\Configuration\ExtensionConfiguration::class)
+        $config = GeneralUtility::makeInstance(\TYPO3\CMS\Core\Configuration\ExtensionConfiguration::class)
                 ->get('rssnews');
-        }
         $this->setContext($config);
     }
 

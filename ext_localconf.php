@@ -1,25 +1,23 @@
 <?php
-defined('TYPO3_MODE') || die('Access denied.');
+// all use statements must come first
+use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
+
+defined('TYPO3') || die('Access denied.');
 
 (function () {
-
-    \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-        'Ubl.Rssnews',
+    ExtensionUtility::configurePlugin(
         'Rssnews',
+        'rssnews',
         [
-            'Rssnews' => 'list',
-
+            \Ubl\Rssnews\Controller\RssnewsController::class => 'list'
         ],
-
-        /**
-         * non-cacheable actions
-         */
+        // non cache actions
         [
-            'Rssnews' => 'list',
-
+            \Ubl\Rssnews\Controller\RssnewsController::class => 'list'
         ]
     );
-
 })();
+
+
 
 

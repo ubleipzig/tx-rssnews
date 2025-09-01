@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## [2.3.0](https://github.com/ubleipzig/tx-rssnews/tree/2.3.0)
+[Changelog](https://github.com/ubleipzig/tx-rssnews/compare/2.2.0...2.3.0)
+
+* adds support for Typo3 v11 and removes it for v9
+* adds _Service.yaml_ at Configuration folder 
+
 ## [2.2.0](https://github.com/ubleipzig/tx-rssnews/tree/2.2.0)
 [Changelog](https://github.com/ubleipzig/tx-rssnews/compare/2.1.4...2.2.0)
 
